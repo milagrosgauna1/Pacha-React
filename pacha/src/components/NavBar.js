@@ -1,18 +1,21 @@
 import React from "react";
-import logo from "../assets/Logo.jpg"
+import logo from "../assets/Logo.jpg";
+import "../components/NavBar.css";
 
 const NavBar = () =>{
-    return ( 
+  return ( 
+    <div>
       <nav>
-         <div class="nav-wrapper">
-             <a href={logo} class="brand-logo">Logo</a>
-             <ul class="right hide-on-med-and-down">
-               <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
-               <li><a href="badges.html"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
-             </ul>
-         </div>
+        <div class="nav-wrapper">
+          <img src={logo} alt="Logo"/>
+          <ul class="right hide-on-med-and-down">
+            <li><a href=""><i class="material-icons left">vpn_key</i>Reservar</a></li>
+            <li><a href=""><i class="material-icons right">visibility</i>Habitaciones</a></li>
+          </ul>
+        </div>
       </nav>
+    </div>
   )
-}
+};
 
 export default NavBar
