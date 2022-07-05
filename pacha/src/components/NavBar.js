@@ -2,9 +2,11 @@ import React from "react";
 import logo from "../assets/Logo.jpg";
 import "../components/NavBar.css";
 
-const NavBar = () =>{
+const NavBar = (nav) =>{
+  console.log ("NavBar props:", {nav});
+
   return ( 
-    <div>
+    <>
       <nav>
         <div class="nav-wrapper">
           <img src={logo} alt="Logo"/>
@@ -14,7 +16,7 @@ const NavBar = () =>{
           </ul>
         </div>
       </nav>
-    </div>
+    </>
   )
 };
 
