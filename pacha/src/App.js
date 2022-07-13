@@ -1,7 +1,7 @@
 import React from "react";
-import ItemListContainer from "./components/ItemListContainer";
+import itemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
-import ItemCount from "./ItemCount.js"
+import ItemCount from "./ItemCount.js";
 
 const App = (props) =>{
 
@@ -14,13 +14,22 @@ const App = (props) =>{
       <NavBar nav="Pacha"/>
       <NavBar nav="Mama"/>
       <div>
-        <List text= "nombre del producto"/>
-        <List text= "descripcion del producto"/>
-        <List text= "precio del producto"/>
+        <Card>
+          <List name="aqua"/>
+          <List stock={35} initial={1} />
+          <List precio={50} />  
+        </Card>
+      </div>
+      <div>
+        <Card>
+          <List name="terra"/>
+          <List stock={28} initial={1} />
+          <List precio={60} />  
+        </Card>
       </div>
       <ItemCount carrito= {carrito} />
     </>
-  )
+  );
 }
 
 export default App

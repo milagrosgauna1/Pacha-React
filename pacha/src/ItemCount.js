@@ -1,13 +1,17 @@
+import React,{useState} from "react";
 import { createRenderer } from "react-dom/test-utils"
 
-const ItemCount = ({miProp, Carrito}) => {
-  const[contador, setContador] = useState(0)
+const ItemCount = ({name, stock, initial, Carrito}) => {
+  const [contador, setContador] = useState(0)
+  const count = (value) => {
+    const result = amount + value
+    if(result<=stock)
+      setContador (contador+value) 
+  }
 
   function ItemCount ({Stock}) {
     const [stock, setStock] = useState (35)
   }
-
-  <ItemCount stock={"35"} initial= {"1"}/>
 
   const handlerClickSumar = () =>{
     setContador (contador + 1);
@@ -29,9 +33,11 @@ const ItemCount = ({miProp, Carrito}) => {
   return(
     <>
     <div>{miProp}</div>
-    <button onClick={handlerClickSumar}>agregar</button>
-    <button onClick={handlerClickQuitar}>quitar</button>
-    <button onClick={reset}>reset</button>
+    <h1> {name} </h1>
+    <button onClick={()=>handlerClickSumar(+1)}>+</button>
+    <span> {contador} | {stock} </span>
+    <button onClick={()=>handlerClickQuitar(-1)}>-</button>
+    <button onClick={reset}>Reset</button>
     </>
   );
 }
