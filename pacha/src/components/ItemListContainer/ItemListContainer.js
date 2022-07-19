@@ -1,10 +1,10 @@
 import { type } from "@testing-library/user-event/dist/type";
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
-import { getData } from "../mocks/fakeApi";
+import ItemList from "../ItemList";
+import { getData } from "../../mocks/fakeApi";
 
 
-const ItemListContainer = ({greeting}) => {
+import const ItemListContainer = ({greeting}) => {
     const [listaProducto, setListaProducto]= useState([])
     const [cargando, setCargando]= useState(true)
 
@@ -22,7 +22,7 @@ const ItemListContainer = ({greeting}) => {
         </div>
     )
 
-    function itemListContainer () {List}
+    function ItemListContainer () {List}
      <List type="text"/>;
 }
 

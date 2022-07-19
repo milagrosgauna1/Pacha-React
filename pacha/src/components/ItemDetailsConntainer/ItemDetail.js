@@ -2,6 +2,7 @@ import React from "react";
 
 const ItemList = (props) => {
     console.log(props.listaProducto)
+    
     return (
         <div>
             <h1>Habitaciones</h1>
